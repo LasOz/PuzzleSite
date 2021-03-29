@@ -4,3 +4,10 @@ body {
     font-size: large;
     color: greenyellow;
   }
+
+input {
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  color: greenyellow;
+}
