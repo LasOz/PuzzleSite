@@ -4,7 +4,7 @@ import time
 import mimetypes
 import os
 
-hostName = "localhost"
+hostName = ""
 serverPort = 80
 
 class MyServer(http.server.SimpleHTTPRequestHandler):
@@ -15,16 +15,16 @@ class MyServer(http.server.SimpleHTTPRequestHandler):
             filepath = os.path.join('.', self.path.strip('/'))
             f = open(filepath)
         except IOError:
-            self.send_error(404,'File Not Found: %s ' % filepath)
+            self.send_error(http.HTTPStatus.NOT_FOUND,'File Not Found: %s ' % filepath)
         else:
-            self.send_response(200)
+            self.send_response(http.HTTPStatus.OK)
             mimetype, _ = mimetypes.guess_type(filepath)
             self.send_header('Content-type', mimetype)
             self.end_headers()
             for s in f:
                 self.wfile.write(s.encode("utf-8"))
 
-if __name__ == "__main__":        
+if __name__ == "__main__":
     webServer = http.server.HTTPServer((hostName, serverPort), MyServer)
     print("Server started http://%s:%s" % (hostName, serverPort))
 
