@@ -5,9 +5,45 @@ body {
     color: greenyellow;
   }
 
+.username{
+  color: white;
+}
+
 input {
   border: 0;
   background-color: rgba(0,0,0,0);
   outline: none;
   color: greenyellow;
+}
+
+div.formItem {
+  margin: 5px;
+  display: table;
+  text-align: center;
+  font-weight: bolder;
+  margin: auto;
+  border-spacing: 20px;
+}
+
+div.frRow {
+  display: table-row;
+}
+
+div.frCell {
+  display: table-cell;
+  padding: 5px;
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  font-size: xx-large;
+}
+
+div.frCell span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
 }
