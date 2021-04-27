@@ -13,12 +13,12 @@ function checkInputConents(/*HTMLElement*/ the_input_box)
         }, 50)
     }
 
-    if (contents.toUpperCase().match("(ATTACK\s*ON\s*)?TITAN"))
+    if (contents === "enable firewall")
     {
-        message = "You must be ANA "
+        message = "Starting firewall "
         the_input_box.parentElement.hidden = true;
         setTimeout(() => {
-            document.location.href = "keylogger.html";
+            document.location.href = "firewall.html";
         }, 3500);
         setTimeout(() => delay(), 500)
     }

@@ -5,6 +5,14 @@ body {
     color: greenyellow;
   }
 
+input {
+  font-family: monospace;
+}
+
+a {
+  color: greenyellow;
+}
+
 .username{
   color: white;
 }
@@ -46,4 +54,12 @@ div.frCell span {
 button {
   margin: 0 auto;
   display: block;
+}
+
+table {
+  text-align: left;
+}
+
+td {
+  padding-right: 20px;
 }

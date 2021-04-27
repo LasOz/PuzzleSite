@@ -13,9 +13,9 @@ function checkInputConents(/*HTMLElement*/ the_input_box)
         }, 50)
     }
 
-    if (contents.startsWith("ls"))
+    if (contents === "ls")
     {
-        message = "Cannot list contents of this directory.";
+        message = "<br>sosterrete exam.txt<br>";
     }
     else if (contents === "sosterrete")
     {
